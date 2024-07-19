@@ -19,20 +19,20 @@ public class NumberGuess {
 		System.out.print("Guess a number between 1 and 10: ");
 		
 		do {
+				
+		    guess = input.nextInt();
+		
+		    if (guess > answer) {
+			System.out.print("Too high, try again: ");
+		    } else if (guess < answer) {
+			System.out.print("Too low, try again: ");
+		    } else {
+			System.out.println("Congratulations! You guessed the right number.");
+			correct = true;
+		    }
+		
+		} while (!correct);
 			
-            guess = input.nextInt();
-
-            if (guess > answer) {
-                System.out.print("Too high, try again: ");
-            } else if (guess < answer) {
-                System.out.print("Too low, try again: ");
-            } else {
-                System.out.println("Congratulations! You guessed the right number.");
-                correct = true;
-            }
-        
-	    } while (!correct);
-	
 		input.close();
 	}
 }
